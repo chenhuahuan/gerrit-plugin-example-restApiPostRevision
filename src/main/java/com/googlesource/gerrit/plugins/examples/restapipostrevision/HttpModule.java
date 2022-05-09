@@ -11,6 +11,6 @@ public class HttpModule extends ServletModule {
         DynamicSet.bind(binder(), WebUiPlugin.class)
                 .toInstance(new JavaScriptPlugin("example-restApiPostRevision.js"));
         DynamicSet.bind(binder(), WebUiPlugin.class)
-                .toInstance(new JavaScriptPlugin("plugin.html"));
+                .toInstance(new JavaScriptPlugin("example-restApiPostRevision.html"));
     }
 }
