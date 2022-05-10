@@ -12,7 +12,11 @@ gerrit_plugin(
         "Implementation-Title: Example Rest Api Post Revision",
     ],
     resource_jars = [":example-restApiPostRevision-static"],
-    resources = glob(["src/main/resources/**/*"])
+    resources = glob(
+        ["src/main/resources/**/*",
+         "src/static/**/*"
+        ],
+    )
 )
 
 genrule2(

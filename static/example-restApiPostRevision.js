@@ -1,8 +1,6 @@
 
 
 Gerrit.install(function(self) {
-//  Only support old GWT UI, poly-gerrit ui is not support by this version
-  if (window.Polymer) { return; } // Cut-off marker
 
   function onSayHello(c) {
     console.log("On say Hello js~~")
@@ -27,4 +25,7 @@ Gerrit.install(function(self) {
   }
   self.onAction('revision', 'hello-revision', onSayHello);
   console.log("GWT UI---------hello.js")
+
+//  Only support old GWT UI, poly-gerrit ui is not support by this version
+  if (window.Polymer) { return; } // Cut-off marker
 });
