@@ -2,7 +2,7 @@
 
 Gerrit.install(function(self) {
 
-  function onSayHello(c) {
+  function onSayHello(c, revision) {
     console.log("On say Hello js~~")
     var f = c.textfield();
     var t = c.checkbox();
@@ -23,9 +23,9 @@ Gerrit.install(function(self) {
       b));
     f.focus();
   }
-  self.onAction('revision', 'hello-revision', onSayHello);
+  self.on("showchange", onSayHello);
   console.log("GWT UI---------hello.js")
 
 //  Only support old GWT UI, poly-gerrit ui is not support by this version
-  if (window.Polymer) { return; } // Cut-off marker
+//  if (window.Polymer) { return; } // Cut-off marker
 });
